@@ -12,7 +12,7 @@ module.exports.checkCourseExists = (reqBody) => {
 	return Course.find({courseId : reqBody.courseId})
 			.then(result => {
 				// the find method returns a record if a match is found
-				if(result) {
+				if(reqBody.courseId > 8) {
 					return true;
 					// no duplication email found
 					// the user is not yet registered in the database
